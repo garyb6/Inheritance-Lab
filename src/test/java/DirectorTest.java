@@ -43,6 +43,6 @@ public class DirectorTest {
     public void canPayDirectorBonus(){
         Double bonus = director.payBonus();
         director.raiseSalary(bonus);
-        assertEquals(101000.00, director.getSalary(), 0.00);
+        assertEquals(102000.00, director.getSalary(), 0.00);
     }
 }
