@@ -32,7 +32,17 @@ public class ManagerTest {
     public void canGetManagerSalary(){
         assertEquals(10.00, manager.getSalary(), 0.00);
     }
-    
 
+    @Test
+    public void canRaiseManagerSalary(){
+        manager.raiseSalary(1.00);
+        assertEquals(11.00, manager.getSalary(), 0.00);
+    }
 
+    @Test
+    public void canPayManagerBonus(){
+        Double bonus = manager.payBonus();
+        manager.raiseSalary(bonus);
+        assertEquals(10.10, manager.getSalary(), 0.00);
+    }
 }
