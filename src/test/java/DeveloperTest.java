@@ -19,6 +19,18 @@ public class DeveloperTest {
     }
 
     @Test
+    public void canSetDeveloperName(){
+        developer.setName("John");
+        assertEquals("John", developer.getName());
+    }
+
+    @Test
+    public void doesNotSetDeveloperNameIfNull(){
+        developer.setName(null);
+        assertEquals("Esgrid Sikahall", developer.getName());
+    }
+
+    @Test
     public void canGetDeveloperNI(){
         assertEquals("JN1234C", developer.getNI());
     }

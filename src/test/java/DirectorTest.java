@@ -22,7 +22,17 @@ public class DirectorTest {
     public void canGetDirectorName(){
         assertEquals("Melinda", director.getName());
     }
+    @Test
+    public void canSetDirectorName(){
+        director.setName("John");
+        assertEquals("John", director.getName());
+    }
 
+    @Test
+    public void doesNotSetDirectorNameIfNull(){
+        director.setName(null);
+        assertEquals("Melinda", director.getName());
+    }
     @Test
     public void canGetDirectorNI(){
         assertEquals("JN2468C", director.getNI());
